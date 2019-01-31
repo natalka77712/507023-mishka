@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Анастасия Меркулова](https://up.htmlacademy.ru/adaptive/15/user/664403).
-* Наставник: `Неизвестно`.
+* Студент: [Наталья Костоусова](https://up.htmlacademy.ru/adaptive/15/user/507023).
+* Наставник: [Думчев Николай](https://htmlacademy.ru/profile/nikopol_fw).
 
 ---
 
