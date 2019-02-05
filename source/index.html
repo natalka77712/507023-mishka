@@ -5,8 +5,131 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+  <header class="page-header">
+    <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="86" height="35" alt="Логотип Мишка">
+    <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="photo.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Поиск по сайту
+            <svg class="main-nav__search-icon" width="17.6" height="17.6"></svg>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Корзина: пока пуста
+            <svg class="main-nav__basket-icon" width="20.3" height="18.9"></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="intro">
+      <h1 class="intro__header">Милые штуки ручной работы для дома</h1>
+      <ul class="intro__list">
+        <li class="intro__item">
+          <a href="#">
+            <b class="intro__name">Предметы интерьера</b>
+            <svg class="intro__interior-item-icon" width="40" height="62.5"></svg>
+          </a>
+        </li>
+        <li class="intro__item">
+          <a href="#">
+            <b class="intro__item">Детские игрушки</b>
+            <svg class="intro__toys-icon" width="60" height="59.6"></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <article class="week-product">
+      <h2 class="week-product__title">Вязаные корзинки</h2>
+      <b class="week-product__best-offer">Товар недели</b>
+      <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+      <table class="week-product__table">
+        <tbody>
+          <tr>
+            <td class="week-product__option">Цвет:</td>
+            <td class="week-product__value">«Тиффани»⁄серый</td>
+          </tr>
+          <tr>
+            <td class="week-product__option">Диаметр:</td>
+            <td class="week-product__value">25см</td>
+          </tr>
+          <tr>
+            <td class="week-product__option">Высота:</td>
+            <td class="week-product__value">15см</td>
+          </tr>
+        </tbody>
+      </table>
+      <img class="week-product__image" src="http://placehold.it/320x396" alt="Изображение приложения" width="260" height="315">
+      <span class="week-product__price">Цена: 900 руб.</span>
+      <a class="week-product__price-btn btn" href="#">Заказать</a>
+    </article>
+    <section class="about-us">
+      <h2 class="about-us__title">Коротко о нас:</h2>
+      <ul class="about-us__list">
+        <li class="about-us__item">Экологически чистые материалы</li>
+        <li class="about-us__item">Скандинавский стиль по российской цене</li>
+        <li class="about-us__item">Увеличивает лайки на фотографиях</li>
+        <li class="about-us__item">Связано вручную с любовью и умилением</li>
+        <li class="about-us__item">Поддержка отечественного производителя</li>
+        <li class="about-us__item">Поставляется в подарочной упаковке</li>
+      </ul>
+    </section>
+    <section class="reviews">
+      <h2 class="reviews__title">Отзывы</h2>
+      <p class="reviews__text">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
+      </p>
+      <b class="reviews__author-name">Анастасия Красильникова</b>
+      <span class="reviews__author-email">@misssssiskras</span>
+      <div class="reviews__toggles-btn btn">
+        <button class="reviews__toggles previous" type="button"></button>
+        <button class="reviews__toggles next" type="button"></button>
+      </div>
+      <a class="reviews__btn" href="#">Написать</a>
+    </section>
+    <section class="contacts">
+      <h2 class="contacts__title">Контакты</h2>
+      <p class="contacts__item  contacts__item--name">e-mail:</p>
+      <p class="contacts__item  contacts__item--email">e-mail:</p>
+      <p class="contacts__item  contacts__item--name">адрес:</p>
+      <p class="contacts__item  contacts__item--adress">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+      <div class="contacts__map"></div>
+      <a class="contacts__write-us-btn btn" href="#">Написать</a>
+    </section>
+  </main>
+  <footer class="page-footer container">
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link socials__link--insta" href="#" aria-label="instagram">
+            <svg class="social__icon" width="22" height="21"></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link socials__link--fb" href="#" aria-label="facebook">
+            <svg class="social__icon" width="22" height="21"></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link socials__link--tw" href="#" aria-label="twitter">
+            <svg class="social__icon" width="22" height="21"></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p class="page-footer__copyright copyright">Разработано
+    <a class="copyright__link" href="https://htmlacademy.ru/">
+      <svg class="page-footer__logo-icon"></svg>
+    </a>
+    </p>
+  </footer>
 
   </body>
-</html>
+  </html>
