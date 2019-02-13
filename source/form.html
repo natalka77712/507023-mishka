@@ -2,14 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html">
-        <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="86" height="35" alt="Логотип Мишка">
-      </a>
-      <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
+      <div class="page-header__logo-link">
+        <a href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
+        </a>
+        <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -30,25 +34,25 @@
           </li>
         </ul>
       </nav>
-      <h1 class="page-header__title page-header__title--form">Вязание на заказ</h1>
+      <div class="intro__form">
+        <h1 class="intro__header intro__header--form">Вязание на заказ</h1>
+      </div>
     </header>
     <main>
-      <div class="form__wrapper">
-        <h2 class="visually-hidden">Форма для конкурса</h2>
-        <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="form__body" method="post" action="https://echo.htmlacademy.ru">
-          <div class="form__order form-order--name">
-            <h3 class="form__title">Тип</h3>
-            <div class="form__block form__block--selection-type">
+      <div class="form">
+        <div class="form__wrapper container">
+          <h2 class="visually-hidden">Форма для конкурса</h2>
+          <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <form class="form__body" method="post" action="https://echo.htmlacademy.ru">
+            <div class="form__block form-block--name">
+              <h3 class="form__title form__title--top">Тип</h3>
               <input class="form__radio visually-hidden" type="radio" name="type" value="interior-accessories" id="interior-type" checked="">
               <label class="form__radio-label" for="interior-type">Аксессуар для интерьера</label>
               <input class="form__radio visually-hidden" type="radio" name="type" value="children-toys" id="toys-type">
               <label class="form__radio-label" for="toys-type">Детская игрушка</label>
             </div>
-          </div>
-          <div class="form__block form__block--color">
-            <h3 class="form__title">Цвет</h3>
-            <div class="form__block form__block--selection-background">
+            <div class="form__block form__block--color">
+              <h3 class="form__title form__title--top">Цвет</h3>
               <input class="form__checkbox visually-hidden" type="checkbox" name="white" id="white-color" checked="">
               <label class="form__checkbox-label" for="white-color">Белый</label>
               <input class="form__checkbox visually-hidden" type="checkbox" name="grey" id="grey-color" checked="">
@@ -62,32 +66,36 @@
               <input class="form__checkbox visually-hidden" type="checkbox" name="orange" id="orange-color">
               <label class="form__checkbox-label" for="orange-color">Оранжевый</label>
             </div>
-          </div>
-          <div class="form__block form__block--contacts">
-            <h3 class="form__title">фио</h3>
-            <div class="form__block form__block--full-name">
+            <div class="form__block form__block--contacts">
+              <h3 class="form__title form__title--middle">фио</h3>
               <label class="form__text-label" for="name">Имя:</label>
               <input class="form__text-input" type="text" name="name" id="name" placeholder="Укажите ваше имя*" required="">
               <label class="form__text-label" for="surname">Фамилия:</label>
               <input class="form__text-input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required="">
               <label class="form__text-label" for="patronymic">Отчество:</label>
-              <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+              <input class="form__text-input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </div>
+            <div class="form__block form__block--user-info">
+              <h3 class="form__title form__title--bottom">тел</h3>
+              <label class="form__text-label" for="tel"></label>
+              <input class="form__text-input" id="tel" type="tel" name="tel" placeholder="+7 XXX XX XX" required="">
+            </div>
+            <div class="form__block">
+              <h3 class="form__title form__title--bottom form__title--shorter">e-mail</h3>
+              <input class="form__text-input" id="mail" name="mail" placeholder="Ваш e-mail" required="">
+            </div>
+            <div class="form__block">
+              <h3 class="form__title form__title--top">доп</h3>
+            <div class="form__text-message">
+              <textarea class="form__textarea" name="wish-list" cols="24" rows="4" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
+            <small class="form__legend">
+              *Поля обязательны для заполнения
+            </small>
           </div>
-          <div class="form__block form__block--user-info">
-            <h3 class="form__title">тел</h3>
-            <label class="form__text-label" for="tel"></label>
-            <input class="form__text-input" id="tel" type="tel" name="tel" placeholder="+7 XXX XX XX" required="">
-            <h3 class="form__title">e-mail</h3>
-            <label class="form__text-label" for="mail">Имя:</label>
-            <input class="form__text-input" id="mail" name="mail" placeholder="Ваш e-mail" required="">
-            <h3 class="form__title">доп</h3>
-          <div class="form__text-message">
-            <textarea class="form__textarea" name="wish-list" cols="24" rows="4" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </div>
-        </div>
-        <button class="form__btn button-submit" type="submit">Отправить форму</button>
+          <button class="form__btn button-submit btn" type="submit">Отправить форму</button>
         </form>
+      </div>
       </div>
     </main>
     <footer class="page-footer container">
@@ -117,10 +125,3 @@
 
   </body>
   </html>
-
-
-
-
-
-
-
