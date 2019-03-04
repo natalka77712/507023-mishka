@@ -1,6 +1,5 @@
 .user-nav__item {
   text-align: left;
-  border-bottom: 1px solid @grey;
   padding-left: 46px;
   box-sizing: border-box;
 }
@@ -34,9 +33,10 @@
 
   .user-nav__item--search {
     width: 84px;
-    border: 1px solid @grey;
     border-top: none;
     position: relative;
+    border: 1px solid #ececec;
+    border-bottom: none;
   }
 
   .user-nav__link--search {
@@ -69,6 +69,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .user-nav__item--cart {
+    padding-right: 0;
+  }
+
   .user-nav__item--cart a {
     padding-top: 31px;
     padding-bottom: 0;

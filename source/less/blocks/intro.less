@@ -1,8 +1,3 @@
-.intro__catalog,
-.intro__form {
-  background-color: @grey-cloud;
-}
-
 .intro__header {
   margin: 0 auto;
   text-align: center;
@@ -12,11 +7,6 @@
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
-}
-
-.intro__header--catalog,
-.intro__header--form {
-  padding-bottom: 78px;
 }
 
 .intro__list {
@@ -86,6 +76,13 @@
     line-height: 50px;
     width: 500px;
   }
+
+  .intro__header--catalog,
+  .intro__header--form {
+    padding-bottom: 92px;
+    padding-top: 95px;
+    line-height: 51px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -102,5 +99,10 @@
 
   .intro__item--toys {
     margin-right: 100px;
+  }
+
+  .intro__header--catalog,
+  .intro__header--form {
+    padding-bottom: 95px;
   }
 }

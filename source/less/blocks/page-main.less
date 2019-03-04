@@ -6,9 +6,21 @@
   background-color: @grey-light;
 }
 
+.page-main__intro--catalog,
+.page-main__intro--form {
+  background-color: @grey-cloud;
+  background-image: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-main__intro {
     background-image: url("../img/hero-desktop@1x.jpg");
     background-size: 1150px 746px;
+    margin-top: -60px;
+  }
+
+  .page-main__intro--catalog,
+  .page-main__intro--form {
+    background-image: none;
   }
 }
