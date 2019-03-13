@@ -1,3 +1,10 @@
+.week-product__promo {
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: auto 6px;
+}
+
 .week-product__wrapper {
   padding: 0 30px;
   padding-top: 28px;
@@ -64,6 +71,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .week-product__promo {
+    background-size: auto 17px;
+  }
+
   .week-product__wrapper {
     position: relative;
     padding: 44px 50px 68px 50px;
@@ -129,9 +140,11 @@
 
 @media (min-width: @desktop-width) {
   .week-product__promo {
-    padding-left: 146px;
-    padding-right: 100px;
-    padding-bottom: 70px;
+    background-size: auto 23px;
+  }
+
+  .week-product__wrapper {
+    padding: 70px 100px;
   }
 
   .week-product__header {
@@ -158,11 +171,11 @@
   .week-product__table {
     width: 295px;
     margin-left: 70px;
-    margin-bottom: 105px;
+    margin-bottom: 85px;
   }
 
   .week-product__image {
-    right: 255px;
+    right: 110px;
     top: 100px;
   }
 
@@ -170,10 +183,6 @@
     width: 525px;
     height: 636px;
     z-index: -1;
-  }
-
-  .week-product__price {
-    margin-left: -20px;
   }
 
   .week-product__price-btn {

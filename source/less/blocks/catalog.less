@@ -1,5 +1,7 @@
 .catalog__wrapper {
   padding: 30px;
+  padding-bottom: 0;
+  position: relative;
 }
 
 .catalog__list {
@@ -34,6 +36,14 @@
   line-height: 24px;
   color: @black;
   font-weight: 700;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog__info {
@@ -54,23 +64,41 @@
   color: @black;
 }
 
-.catalog__video {
+.catalog__video-wrapper {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 60px;
-  padding: 0 30px;
 }
 
 .catalog__video-presentation,
-.catalog__video-wrapper,
 .catalog__video-shot {
   width: 100%;
+  position: relative;
+}
+
+.catalog__video-presentation::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 101px;
+  height: 77px;
+  background-image: url("../img/icon-play.svg");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.catalog__video {
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
 }
 
 .catalog__video-title {
+  position: relative;
   margin: 0;
   padding: 25px;
   padding-bottom: 23px;
@@ -79,6 +107,16 @@
   line-height: 24px;
   font-weight: bold;
   border: 1px solid @grey-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: 13%;
+    width: 32px;
+    height: 32px;
+    background: url("../img/icon-video.svg") no-repeat 50% 50%;
+  }
 }
 
 .catalog__video-shot {
@@ -90,6 +128,14 @@
   padding-top: 25px;
   margin-bottom: 58px;
   border: 1px solid @grey-light;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog__video-description {
@@ -113,6 +159,11 @@
 
   .catalog__video-title {
     border-bottom: none;
+
+    &::before {
+      top: 18px;
+      left: 4%;
+    }
   }
 
   .catalog__list {
@@ -160,6 +211,14 @@
 
   .catalog__price-wrapper {
     margin-top: auto;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .catalog__price {
@@ -175,16 +234,36 @@
     border-top: none;
   }
 
+  .catalog__basket-icon {
+    fill: @smoky;
+
+    &:hover {
+      fill: @emerald-green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
   .catalog__video {
     display: flex;
     flex-direction: column;
-    width: auto;
     padding: 0 50px;
     margin: 0 auto;
   }
 
   .catalog__video-presentation {
     order: -1;
+
+    &:hover::after {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    &:active::after {
+      transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0.6;
+    }
   }
 
   .catalog__video-description {
@@ -198,6 +277,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog__product:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   .catalog__item {
     width: 316px;
     margin-bottom: 0;
@@ -217,24 +304,38 @@
     height: 462px;
   }
 
-  .catalog__video {
-    height: 455px;
-    padding: 57px 50px 105px;
-    box-sizing: content-box;
+  .catalog__video-wrapper {
+    padding-top: 60px;
+    padding-bottom: 106px;
   }
 
-  .catalog__video-wrapper {
-    width: 367px;
+  .catalog__video {
+    flex-direction: row;
   }
 
   .catalog__video-title {
-    width: 185px;
+    flex-basis: 160px;
+    padding-right: 152px;
     padding-top: 85px;
     font-size: 20px;
+    padding-left: 46px;
+
+    &::before {
+      top: 28px;
+      left: 12%;
+    }
+
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 
   .catalog__video-presentation {
-    width: 682px;
+    flex-basis: 690px;
   }
 
   .catalog__video-presentation img {
@@ -243,17 +344,20 @@
   }
 
   .catalog__video-info {
-    width: 290px;
+    flex-basis: 350px;
     padding-bottom: 45px;
-    border-left: none;
-    box-sizing: border-box;
-    border-top: none;
+    padding-left: 51px;
     padding-right: 0;
+    border: none;
+    box-sizing: border-box;
     margin-bottom: 0;
+    margin-left: -368px;
+    margin-top: auto;
   }
 
   .catalog__video-description {
     margin-bottom: 55px;
+    width: 240px;
   }
 
   .catalog__video-btn {

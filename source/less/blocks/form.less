@@ -95,6 +95,24 @@
   }
 }
 
+.form__radio-label:hover::before,
+.form__checkbox-label:hover::before {
+  border: 2px solid @emerald-green;
+}
+
+.form__radio-label:active::before,
+.form__checkbox-label:active::before {
+  border: 2px solid @smoky;
+}
+
+.form__text-input:hover {
+  border-bottom: 2px solid @emerald-green;
+}
+
+.form__textarea:hover {
+  border: 2px solid @emerald-green;
+}
+
 .form__radio:checked + label::after {
   content: "";
   position: absolute;
@@ -137,6 +155,11 @@
   transform: rotate(-45deg);
 }
 
+.form__wrapper--tel,
+.form__wrapper--mail {
+  position: relative;
+}
+
 .form__text-input {
   display: block;
   width: 100%;
@@ -146,6 +169,7 @@
   padding-bottom: 18px;
   font-size: 17px;
   line-height: 18px;
+  opacity: 0.3;
   color: @grey-dark;
   font-weight: 400;
   border: none;
@@ -154,6 +178,22 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.form__text-icon {
+  position: absolute;
+  top: 40px;
+  right: -5px;
+  fill: @smoky;
+
+  &:hover {
+    fill: @emerald-green;
+    opacity: 1;
   }
 }
 
@@ -166,9 +206,14 @@
   font-weight: normal;
   font-size: 17px;
   line-height: 18px;
+  opacity: 0.3;
   border: 2px solid @black;
   outline: none;
   box-sizing: border-box;
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .form__legend {

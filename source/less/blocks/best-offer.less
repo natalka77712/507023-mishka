@@ -6,13 +6,13 @@
   .best-offer__delivery-free {
     display: block;
     margin: 0;
-    padding-right: 50px;
     padding-top: 18px;
     padding-bottom: 18px;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     color: @grey-dark;
+    text-align: right;
   }
 }
 
@@ -42,11 +42,19 @@
     text-decoration: none;
     padding-top: 15px;
     display: block;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .best-offer__delivery-free {
     margin-left: auto;
-    width: 750px;
+    width: 655px;
     text-align: right;
     padding-right: 0;
   }
