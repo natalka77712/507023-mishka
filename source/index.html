@@ -68,8 +68,8 @@
             <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
           </picture>
         </div>
-        <button type="button" class="main-nav__toggle main-nav__toggle--opened" aria-label="Открыть меню"></button>
-        <nav class="page-header__main-nav page-header__main-nav--opened page-header__main-nav--no-js">
+        <button type="button" class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--no--js" aria-label="Открыть меню"></button>
+        <nav class="page-header__main-nav page-header__main-nav--closed page-header__main-nav--no-js">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--catalog">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -79,7 +79,7 @@
             </li>
           </ul>
         </nav>
-        <nav class="page-header__user-nav page-header__user-nav--opened page-header__user-nav--no-js">
+        <nav class="page-header__user-nav page-header__user-nav--closed page-header__user-nav--no-js">
           <ul class="user-nav__list">
             <li class="user-nav__item user-nav__item--search">
               <a class="user-nav__link user-nav__link--search" href="#">Поиск по сайту
@@ -278,6 +278,8 @@
         </form>
       </div>
     </div>
+
+    <script src="js/main.js"></script>
 
   </body>
   </html>
