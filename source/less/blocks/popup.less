@@ -1,5 +1,4 @@
 .popup {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -13,6 +12,10 @@
   text-align: center;
   box-sizing: border-box;
   border: 1px solid @smoky;
+
+  &--show {
+    display: none;
+  }
 }
 
 .popup__title {
